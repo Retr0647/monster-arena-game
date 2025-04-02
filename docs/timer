@@ -1,0 +1,42 @@
+# ⏲️ Timer - Class Documentation
+
+## 🛠 Initialization (__init__)
+# Purpose:
+# - Manages timed events with configurable durations, callbacks, and repeating behavior.
+# - Tracks the passage of time and executes a callback function when the time duration has passed.
+# 
+# Parameters:
+# - `duration` (int): The time in milliseconds that the timer will run before triggering the callback.
+# - `func` (function, optional): A function to call once the timer reaches its duration.
+# - `repeat` (int, optional): The number of times the timer should repeat. If `None`, the timer will not repeat.
+# - `autostart` (bool, optional): Whether the timer should start automatically upon initialization. Defaults to `False`.
+#
+# Returns: None
+
+## 🔄 __bool__()
+# Purpose:
+# - Allows the timer to be checked in conditional statements to determine if it is active.
+#
+# Returns: 
+# - `True` if the timer is active, `False` if it is not.
+
+## 🚦 activate()
+# Purpose:
+# - Activates the timer and begins counting down from the set duration.
+#
+# Returns: None
+
+## 🚫 deactivate()
+# Purpose:
+# - Deactivates the timer and resets the start time.
+# - If the timer is set to repeat, it will automatically reactivate.
+#
+# Returns: None
+
+## ⏳ update()
+# Purpose:
+# - Updates the timer, checking if the current time has passed the specified duration.
+# - If the duration has passed, it triggers the callback function (if provided) and deactivates the timer.
+# - If the timer is set to repeat, it will reactivate after execution.
+#
+# Returns: None
