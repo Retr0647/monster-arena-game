@@ -1,0 +1,51 @@
+# 📂 Asset Importer - Game Documentation
+
+## 📌 Overview
+# This Python file provides functions for importing game assets such as images, audio, and tile-based sprites.
+# These functions are used to dynamically load assets from directories and return structured dictionaries.
+
+## 📥 folder_importer(*path)
+# Purpose:
+# - Loads and organizes image assets from a specified directory.
+#
+# Parameters:
+# - path (tuple): The directory path to import images from.
+#
+# Functionality:
+# 1. Iterates through the directory.
+# 2. Loads each image and converts it to an optimized format.
+# 3. Stores images in a dictionary with their filenames (excluding extensions) as keys.
+#
+# Returns:
+# - Dictionary containing image surfaces indexed by filename.
+
+## 🔊 audio_importer(*path)
+# Purpose:
+# - Loads and organizes audio assets from a specified directory.
+#
+# Parameters:
+# - path (tuple): The directory path to import audio files from.
+#
+# Functionality:
+# 1. Iterates through the directory.
+# 2. Loads each audio file as a Pygame sound object.
+# 3. Stores audio objects in a dictionary with their filenames (excluding extensions) as keys.
+#
+# Returns:
+# - Dictionary containing audio objects indexed by filename.
+
+## 🎭 tile_importer(cols, *path)
+# Purpose:
+# - Loads and slices tile-based sprite sheets into individual frames.
+#
+# Parameters:
+# - cols (int): The number of columns in the sprite sheet.
+# - path (tuple): The directory path to import tile images from.
+#
+# Functionality:
+# 1. Loads a sprite sheet image.
+# 2. Slices the image into equal-width frames.
+# 3. Stores frames in a dictionary indexed by filename.
+#
+# Returns:
+# - Dictionary containing lists of frame surfaces for each tile set.
