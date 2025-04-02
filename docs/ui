@@ -1,0 +1,146 @@
+# 🖥 UI System - Game Documentation
+
+## 📌 Overview
+# The UI system manages user interactions, controls, and displays game information.
+# It includes menus for stats, upgrades, controls, and in-game HUD elements.
+
+## 🛠 Initialization (__init__)
+# Purpose:
+# - Sets up UI elements, fonts, and screen display.
+# - Initializes player-related UI components.
+# - Manages key icons, skill descriptions, and UI visibility.
+#
+# Parameters:
+# - player (object): The player instance.
+# - skills (dict): Player skill attributes.
+# - skill_icon (dict): Icons for skills.
+# - key_icons (dict): Visual representation of key bindings.
+# - get_input (function): Callback function for handling input.
+#
+# Returns: None
+
+## 🎮 input()
+# Purpose:
+# - Handles navigation in menus using keyboard input.
+# - Switches between different UI states (Upgrade, Controls, Stats, Exit).
+#
+# Functionality:
+# 1. Moves selection within menus using arrow keys.
+# 2. Confirms actions with the Enter key.
+# 3. Exits menus and returns to the main state using the Escape key.
+
+## 🔼 quad_select(index, options)
+# Purpose:
+# - Renders a 2x2 selection menu for general options and upgrades.
+#
+# Parameters:
+# - index (dict): The current row and column selection.
+# - options (list): List of available menu options.
+#
+# Functionality:
+# 1. Draws a selection box for menu options.
+# 2. Highlights the selected option.
+
+## 📛 name_box()
+# Purpose:
+# - Displays the player’s name in a small UI box.
+#
+# Functionality:
+# 1. Renders the player's name inside a styled box.
+# 2. Positions it relative to other UI elements.
+
+## 🎮 controls()
+# Purpose:
+# - Displays key bindings and their functions in the Controls menu.
+#
+# Functionality:
+# 1. Renders a scrollable list of key bindings and descriptions.
+# 2. Highlights the currently selected key binding.
+
+## 📊 stats()
+# Purpose:
+# - Displays the player's current stats (health, damage, speed, etc.).
+#
+# Functionality:
+# 1. Draws a background panel for stats.
+# 2. Displays skill names, icons, and corresponding values.
+
+## 🏆 draw()
+# Purpose:
+# - Renders the appropriate UI elements based on the current state.
+#
+# Functionality:
+# 1. Calls `quad_select()` for general menu navigation.
+# 2. Calls `controls()` when the user selects Controls.
+# 3. Calls `stats()` when the user selects Stats.
+# 4. Displays the player’s name using `name_box()`.
+
+## ⏳ update()
+# Purpose:
+# - Updates UI state based on user input and gameplay events.
+
+# Functionality:
+# 1. Processes input using `input()`.
+# 2. Updates stats display.
+
+## 💰 CoinCounter
+# Purpose:
+# - Displays the player’s current coin balance.
+#
+# Parameters:
+# - player (object): Player instance.
+# - coins (dict): Dictionary containing coin images.
+#
+# Functionality:
+# 1. Draws the current coin balance in the UI.
+# 2. Positions the coin icon next to the displayed value.
+
+## ❤️ HealthBar
+# Purpose:
+# - Displays the player’s health in a bar format.
+#
+# Parameters:
+# - player (object): The player instance.
+#
+# Functionality:
+# 1. Draws a health bar representing current health.
+# 2. Adjusts bar length based on max health.
+
+## ☠️ DeathScreen
+# Purpose:
+# - Displays the game over screen when the player dies.
+#
+# Functionality:
+# 1. Draws a semi-transparent overlay.
+# 2. Displays “Game Over” text.
+# 3. Shows an option to quit.
+
+## 🏅 WinScreen
+# Purpose:
+# - Displays the victory screen when the player wins the game.
+#
+# Parameters:
+# - score (int): The player’s final score.
+#
+# Functionality:
+# 1. Displays a “You Won” message.
+# 2. Shows the player’s final score.
+# 3. Offers an option to exit the game.
+
+## ⏳ TimerDisplay
+# Purpose:
+# - Displays the countdown timer for the current game round.
+#
+# Parameters:
+# - round (int): The current game round.
+#
+# Functionality:
+# 1. Retrieves and displays the remaining round time.
+# 2. Formats the time as seconds.
+
+## 🎬 WelcomeScreen
+# Purpose:
+# - Displays the welcome message at the start of the game.
+#
+# Functionality:
+# 1. Shows a message prompting the player to press 'E' to open the menu.
