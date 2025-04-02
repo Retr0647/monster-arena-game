@@ -1,0 +1,35 @@
+# 🎮 AllSprites - Game Documentation
+
+## 📌 Overview
+# This module defines the **AllSprites** class, which manages and renders all game sprites.
+# It ensures that objects are drawn in the correct order to maintain visual depth.
+
+## 🛠 Initialization (__init__)
+# Purpose:
+# - Initializes a custom sprite group that handles rendering with an offset.
+# - Stores a reference to the game display surface.
+# - Sets up an **offset vector** to manage camera movement.
+#
+# Parameters: None
+# Returns: None
+
+## 🎨 draw(target_pos)
+# Purpose:
+# - Renders all sprites with an offset, simulating a camera effect centered on the player.
+#
+# Parameters:
+# - target_pos (tuple): The coordinates of the player or main focus object.
+#
+# Functionality:
+# 1. Adjusts the **offset vector** to center the camera on the target position.
+# 2. Separates **ground sprites** (stationary objects like floors) from **object sprites** (dynamic entities like enemies and the player).
+# 3. Sorts objects by their **Y-coordinate** to maintain proper rendering depth.
+# 4. Draws sprites on the display surface using their adjusted positions.
+
+## 📦 Dependencies
+# - `pygame`: For handling sprite groups and rendering.
+# - `settings.py`: Contains game configuration values such as `WINDOW_WIDTH` and `WINDOW_HEIGHT`.
+
+## 🚀 Execution
+# - Used within the game's main rendering loop to draw all objects with perspective depth.
+
