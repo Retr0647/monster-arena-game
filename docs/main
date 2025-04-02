@@ -1,0 +1,136 @@
+# 🎮 Monster Arena - Game Documentation
+
+## 📌 Overview
+# This Python file powers the **Monster Arena** game using Pygame.
+# It sets up the game environment, handles user input, manages collisions, 
+# controls enemy spawns, and updates game states.
+
+## 🛠 Initialization (__init__)
+# Purpose:
+# - Initializes Pygame, display settings, and game clock.
+# - Creates sprite groups for managing game objects.
+# - Sets up timers for shooting, enemy spawning, and round progression.
+# - Loads game assets (audio, images, animations).
+# - Initializes player skills, UI elements, and gameplay variables.
+# - Starts background music.
+#
+# Parameters: None
+# Returns: None
+
+## 🎨 load_assets()
+# Purpose:
+# - Loads and organizes game assets such as audio, images, and animations.
+#
+# Functionality:
+# 1. Loads audio files using `audio_importer()`.
+# 2. Imports coin, key, and skill images.
+# 3. Loads enemy animation frames from sprite sheets.
+
+## 🖥 ui_input(state, data=None)
+# Purpose:
+# - Handles UI interactions for upgrades and exiting the game.
+#
+# Parameters:
+# - state (string): Specifies the type of UI action.
+# - data (optional): Additional information like selected skill.
+#
+# Functionality:
+# 1. If `Upgrade` is selected, calls `apply_upgrade(data)`.
+# 2. If `Exit` is selected, terminates the game using `sys.exit()`.
+
+## 📈 apply_upgrade(skill)
+# Purpose:
+# - Applies upgrades to player attributes if they have enough balance.
+#
+# Parameters:
+# - skill (string): The skill to be upgraded.
+#
+# Functionality:
+# 1. Checks if the player has sufficient balance.
+# 2. Deducts the balance and applies the upgrade.
+# 3. Affects attributes like **damage, health, speed, and shooting speed**.
+
+## 🎮 input()
+# Purpose:
+# - Captures player inputs for movement, shooting, and UI interactions.
+#
+# Functionality:
+# 1. Checks for **mouse click** to shoot bullets.
+# 2. Listens for **spacebar press** to start the round.
+# 3. Toggles the **upgrade menu** with the 'E' key.
+
+## 🎯 bullet_collision()
+# Purpose:
+# - Checks for bullet collisions with enemies and reduces their health.
+#
+# Functionality:
+# 1. If a bullet hits an enemy, damage is applied.
+# 2. If the enemy’s health reaches zero:
+#    - Enemy is removed from the game.
+#    - The player earns **score and coins**.
+#    - A sound effect plays.
+
+## 🛡 player_collision()
+# Purpose:
+# - Detects collision between the player and enemies.
+# - Reduces player health and handles the game over state.
+#
+# Functionality:
+# 1. Checks for contact between the player and enemies.
+# 2. Deducts **health based on enemy type**.
+# 3. Plays a **hurt sound effect**.
+# 4. Ends the game if health reaches zero.
+
+## ⏳ round_end()
+# Purpose:
+# - Handles game round progression and victory conditions.
+#
+# Functionality:
+# 1. If the player completes "Round 5", the game ends with victory.
+# 2. Updates round settings (enemy count, difficulty, timers).
+# 3. Resets enemy spawns and plays transition music.
+
+## 💀 over()
+# Purpose:
+# - Displays the **win or lose** screen and handles game exit.
+#
+# Functionality:
+# 1. If the player **wins**, plays victory music and shows the win screen.
+# 2. If the player **loses**, plays defeat music and shows the death screen.
+# 3. Waits for user input to exit the game.
+
+## 🗺 setup()
+# Purpose:
+# - Loads the game world from a tile-based map.
+#
+# Functionality:
+# 1. Loads the **tile map** and places objects.
+# 2. Initializes **player, enemies, and obstacles**.
+# 3. Stores **enemy spawn locations**.
+
+## 🚀 run()
+# Purpose:
+# - The main game loop that handles **updates, input, and rendering**.
+#
+# Functionality:
+# 1. Handles **game events** (quitting, spawning, countdowns).
+# 2. Processes **player input**.
+# 3. Updates **timers, sprites, and collisions**.
+# 4. Renders **UI elements** and refreshes the display.
+
+## 📦 Dependencies
+# This game imports the following modules:
+# - `pygame`: For game rendering and event handling.
+# - `player.py`: Manages player logic.
+# - `sprites.py`: Handles sprite-based objects.
+# - `groups.py`: Organizes sprite groups.
+# - `ui.py`: Manages the user interface.
+# - `support.py`: Handles asset imports.
+# - `timer.py`: Manages time-based events.
+
+## 🏆 Execution
+# - Runs the game loop when executed as a script (`__main__`).
+# - Calls `game.run()` and handles the game over state.
+
+## 📜 License
+# This project is open-source and available under the **MIT License**.
