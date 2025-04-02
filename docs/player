@@ -1,0 +1,103 @@
+# 🏃 Player System - Game Documentation
+
+## 📌 Overview
+# This Python file defines the **Player** class for the game.
+# It handles movement, animation, collision detection, and player statistics.
+
+## 🛠 Initialization (__init__)
+# Purpose:
+# - Initializes the player sprite with position, animations, and game stats.
+# - Loads player images and sets up movement and collision handling.
+#
+# Parameters:
+# - pos (tuple): The initial position of the player.
+# - groups (pygame.sprite.Group): Groups to which the player belongs.
+# - collision_sprites (pygame.sprite.Group): Sprites the player can collide with.
+#
+# Returns: None
+
+## 🎨 load_images()
+# Purpose:
+# - Loads and organizes player animation frames.
+#
+# Functionality:
+# 1. Iterates through `left, right, up, down` movement states.
+# 2. Loads image frames for each state.
+# 3. Stores the images in a dictionary for animation.
+
+## 📊 stats_update()
+# Purpose:
+# - Updates player statistics.
+#
+# Functionality:
+# 1. Syncs the player's attributes like **damage, health, speed, and shooting speed**.
+
+## 🏥 health (property)
+# Purpose:
+# - Controls player health with automatic clamping.
+#
+# Functionality:
+# 1. Ensures health does not exceed maximum health or drop below zero.
+
+## 🎮 input()
+# Purpose:
+# - Captures keyboard inputs for player movement.
+#
+# Functionality:
+# 1. Reads `WASD` or `Arrow` key presses.
+# 2. Updates movement direction based on key states.
+
+## 🚶 move(delta)
+# Purpose:
+# - Moves the player based on direction and speed.
+#
+# Parameters:
+# - delta (float): Time-based scaling for movement.
+#
+# Functionality:
+# 1. Adjusts the player's hitbox position.
+# 2. Calls `collision()` to prevent moving through obstacles.
+
+## ⚔️ collision(direction)
+# Purpose:
+# - Handles collisions with obstacles.
+#
+# Parameters:
+# - direction (string): Specifies horizontal or vertical collision.
+#
+# Functionality:
+# 1. Checks for collisions with objects in `collision_sprites`.
+# 2. Stops movement in the direction of impact.
+
+## 🎞 animate(delta)
+# Purpose:
+# - Animates the player based on movement direction.
+#
+# Parameters:
+# - delta (float): Time-based scaling for animation.
+#
+# Functionality:
+# 1. Updates the player's state (`left, right, up, down`).
+# 2. Cycles through animation frames when moving.
+# 3. Resets animation if the player is idle.
+
+## 🔄 update(delta)
+# Purpose:
+# - Updates all aspects of the player each frame.
+#
+# Parameters:
+# - delta (float): Time-based scaling for game logic.
+#
+# Functionality:
+# 1. Processes player input.
+# 2. Moves the player and handles collisions.
+# 3. Updates animation.
+# 4. Refreshes player statistics.
+
+## 📦 Dependencies
+# This module requires:
+# - `pygame`: For rendering and input handling.
+# - `settings.py`: Stores player stats and settings.
+
+## 📜 License
+# This project is open-source and available under the **MIT License**.
