@@ -1,0 +1,99 @@
+# 🎮 Sprite System - Game Documentation
+
+## 📌 Overview
+# This module defines various sprite-based game objects used in **Monster Arena**.
+# It includes base sprites, guns, bullets, coins, and enemies, handling their behaviors,
+# animations, collisions, and movement.
+
+## 🛠 Sprite (Base Class)
+# Purpose:
+# - A basic sprite that represents game objects.
+#
+# Parameters:
+# - pos (tuple): Initial position of the sprite.
+# - surf (Surface): The surface (image) representing the sprite.
+# - groups (pygame.sprite.Group): Groups to which the sprite belongs.
+#
+# Functionality:
+# 1. Stores the sprite image and sets its position.
+# 2. Initializes a default **grounded** state.
+
+## 🛡 CollisionSprite
+# Purpose:
+# - A static sprite used for collision detection.
+#
+# Parameters:
+# - pos (tuple): Initial position of the sprite.
+# - surf (Surface): The surface (image) of the sprite.
+# - groups (pygame.sprite.Group): Groups to which the sprite belongs.
+#
+# Functionality:
+# 1. Similar to `Sprite`, but intended for obstacles and collision detection.
+
+## 🔫 Gun
+# Purpose:
+# - Represents the player's gun, rotating based on mouse position.
+#
+# Parameters:
+# - player (Player): The player object holding the gun.
+# - groups (pygame.sprite.Group): Groups for sprite management.
+#
+# Functionality:
+# 1. Calculates gun direction based on mouse position.
+# 2. Rotates and repositions the gun accordingly.
+# 3. Updates gun placement in sync with the player.
+
+## 🎯 Bullet
+# Purpose:
+# - Represents bullets fired by the player.
+#
+# Parameters:
+# - surf (Surface): The bullet image.
+# - pos (tuple): The initial bullet position.
+# - direction (Vector2): The bullet's movement direction.
+# - groups (pygame.sprite.Group): Groups for sprite management.
+#
+# Functionality:
+# 1. Moves in a straight line based on direction.
+# 2. Despawns after a set lifetime.
+
+## 💰 Coin
+# Purpose:
+# - An animated coin collectible that grants the player in-game currency.
+#
+# Parameters:
+# - pos (tuple): The spawn position.
+# - frames (list): Animation frames for the coin.
+# - groups (pygame.sprite.Group): Groups for sprite management.
+#
+# Functionality:
+# 1. Cycles through animation frames for a spinning effect.
+
+## 👹 Enemy
+# Purpose:
+# - Represents enemies that chase the player.
+#
+# Parameters:
+# - pos (tuple): Spawn position of the enemy.
+# - frames (dict): Animation frames for different enemy types.
+# - groups (pygame.sprite.Group): Groups for sprite management.
+# - player (Player): Reference to the player object.
+# - collision_sprites (Group): Collision group for obstacles.
+# - name (string): Enemy type identifier.
+# - round (int): Current game round affecting enemy stats.
+#
+# Functionality:
+# 1. Moves toward the player, adjusting direction dynamically.
+# 2. Detects and resolves collisions with obstacles.
+# 3. Plays animations based on movement state.
+# 4. Handles **death animation** and removal upon defeat.
+
+## 📦 Dependencies
+# - `pygame`: For rendering and physics.
+# - `math.atan2` and `math.degrees`: For angle calculations.
+# - `timer.Timer`: For handling enemy death timing.
+# - `settings`: Stores constant values like enemy attributes.
+
+## 🏆 Execution
+# - Each class updates and processes its behavior per frame.
+# - Objects are added to sprite groups for automatic updates and rendering.
