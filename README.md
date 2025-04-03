@@ -9,6 +9,7 @@ based game where you have to survive each round by defeating enemies.
 The project is originally from a youtube course video for learning Python, by making 5 
 different games, made by a youtuber named Clear Code. Here is a link to this course: 
 https://www.youtube.com/watch?v=8OMghdHP-zs&pp=0gcJCfcAhR29_xXO 
+
 The base game was very simple and did not include the round system or the skills upgrade system.
 I managed to add those features and it fundamentally improved my knowledge of Python.
 
