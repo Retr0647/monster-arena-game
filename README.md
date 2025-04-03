@@ -16,56 +16,64 @@ I managed to add those features and it fundamentally improved my knowledge of Py
 
 Based on the provided code, "Monster Arena" has the following key features:
 
-#1. Core Gameplay
--Wave-Based Combat: The game consists of multiple rounds where players must survive against waves of enemies.
--Enemy Types: Different enemy types include bats, blobs, and skeletons, each with unique health and attack properties.
--Shooting Mechanics: The player can shoot bullets at enemies using a gun.
--Round Progression: Players progress through rounds, facing increasing enemy difficulty.
+-1. Core Gameplay
+   
+   -Wave-Based Combat: The game consists of multiple rounds where players must survive against waves of enemies.
+   -Enemy Types: Different enemy types include bats, blobs, and skeletons, each with unique health and attack properties.
+   -Shooting Mechanics: The player can shoot bullets at enemies using a gun.
+   -Round Progression: Players progress through rounds, facing increasing enemy difficulty.
 
-#2. Player Mechanics
--Health System: The player has a health bar, and getting hit by enemies reduces health.
--Upgradable Skills: Players can upgrade attributes like:
--Damage (costs 500 coins)
--Health (costs 750 coins)
--Running Speed (costs 250 coins)
--Shooting Speed (costs 500 coins)
--Coin Collection: Players earn coins by defeating enemies and can use them for upgrades.
--Immortality Mode: The game starts with temporary invincibility.
+-2. Player Mechanics
+   
+   -Health System: The player has a health bar, and getting hit by enemies reduces health.
+   -Upgradable Skills: Players can upgrade attributes like:
+   -Damage (costs 500 coins)
+   -Health (costs 750 coins)
+   -Running Speed (costs 250 coins)
+   -Shooting Speed (costs 500 coins)
+   -Coin Collection: Players earn coins by defeating enemies and can use them for upgrades.
+   -Immortality Mode: The game starts with temporary invincibility.
 
-#3. Enemy System
--Enemy Spawning: Enemies spawn at predefined locations.
--Enemy Attack: Enemies inflict damage upon collision with the player.
--Death & Rewards: Enemies drop rewards upon defeat.
+-3. Enemy System
+   
+   -Enemy Spawning: Enemies spawn at predefined locations.
+   -Enemy Attack: Enemies inflict damage upon collision with the player.
+   -Death & Rewards: Enemies drop rewards upon defeat.
 
-#4. UI & Visuals
--Health Bar: Displays the player’s current health.
--Coin Counter: Keeps track of collected coins.
--Round Timer: Shows time left in the current round.
--Welcome Screen: A starting screen before the game begins.
--Win & Death Screens: Displays appropriate screens depending on whether the player wins or loses.
+-4. UI & Visuals
+   
+   -Health Bar: Displays the player’s current health.
+   -Coin Counter: Keeps track of collected coins.
+   -Round Timer: Shows time left in the current round.
+   -Welcome Screen: A starting screen before the game begins.
+   -Win & Death Screens: Displays appropriate screens depending on whether the player wins or loses.
 
-#5. Sound & Music
--Background Music: Continuous music plays during gameplay.
--Sound Effects:
--Shooting
--Enemy impacts
--Damage received
--Coin collection
--Winning and losing sounds
+-5. Sound & Music
+   
+   -Background Music: Continuous music plays during gameplay.
+   -Sound Effects:
+   -Shooting
+   -Enemy impacts
+   -Damage received
+   -Coin collection
+   -Winning and losing sounds
 
-#6. Game Progression & Difficulty
--Multiple Rounds: Players advance through five rounds.
--Increasing Challenge: Enemy count and difficulty increase in later rounds.
--Custom Events: The game has timers for spawning enemies and tracking round durations.
+-6. Game Progression & Difficulty
+   
+   -Multiple Rounds: Players advance through five rounds.
+   -Increasing Challenge: Enemy count and difficulty increase in later rounds.
+   -Custom Events: The game has timers for spawning enemies and tracking round durations.
 
-#7. Environment & World
--Tile-Based Map: The game loads a 2D tile-based world using Tiled (.tmx) maps.
--Collision System: Players and enemies collide with obstacles.
--Spawn Points: Enemies appear at pre-defined spawn locations.
+-7. Environment & World
+   
+   -Tile-Based Map: The game loads a 2D tile-based world using Tiled (.tmx) maps.
+   -Collision System: Players and enemies collide with obstacles.
+   -Spawn Points: Enemies appear at pre-defined spawn locations.
 
-#8. Game Over Conditions
--Win Condition: Survive all rounds to win.
--Lose Condition: If the player’s health reaches zero, the game ends.
+-8. Game Over Conditions
+    
+   -Win Condition: Survive all rounds to win.
+   -Lose Condition: If the player’s health reaches zero, the game ends.
 
 ## 📦 Installation
 
